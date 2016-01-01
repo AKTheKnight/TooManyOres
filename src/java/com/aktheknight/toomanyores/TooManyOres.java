@@ -3,12 +3,19 @@ package com.aktheknight.toomanyores;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLLoadCompleteEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.common.MinecraftForge;
+import ores.GetOres;
+import ores.OreFile;
+import ores.OreGen;
 
 import java.io.File;
 import java.io.IOException;
+
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import config.ConfigHandler;
 
 @Mod(modid="TooManyOres", name="Too Many Ores", version="1.7.10-1.0.3")
 
@@ -23,7 +30,21 @@ public class TooManyOres {
   //Create logger
   public static Logger LOGGER = LogManager.getLogger(MODID);
   
+  //Config options
+  //Writing to file
   public static boolean writeSingleOres = true;
+  //Ore Gen
+  public static boolean VanillaGen = false;
+  public static boolean VanillaOres = false;
+  public static boolean Dirt = false;
+  public static boolean Gravel = false;
+  public static boolean Coal = false;
+  public static boolean Iron = false;
+  public static boolean Gold = false;
+  public static boolean Diamond = false;
+  public static boolean Lapis = false;
+  public static boolean Redstone = false;
+  public static boolean Quartz = false;
   
   @Mod.EventHandler
   public void preInit(FMLPreInitializationEvent event) {
@@ -42,6 +63,8 @@ public class TooManyOres {
 		  return;
 	  }
 	  LOGGER.log(Level.INFO, "File setup done");
+	  
+	  MinecraftForge.ORE_GEN_BUS.register(new OreGen());
   }
   
   @Mod.EventHandler

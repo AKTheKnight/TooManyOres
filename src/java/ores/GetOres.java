@@ -1,4 +1,4 @@
-package com.aktheknight.toomanyores;
+package ores;
 
 import java.io.IOException;
 import java.util.ArrayList;

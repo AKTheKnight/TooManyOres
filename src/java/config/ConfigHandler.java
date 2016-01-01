@@ -1,6 +1,8 @@
-package com.aktheknight.toomanyores;
+package config;
 
 import java.io.File;
+
+import com.aktheknight.toomanyores.TooManyOres;
 
 import net.minecraftforge.common.config.Configuration;
 
