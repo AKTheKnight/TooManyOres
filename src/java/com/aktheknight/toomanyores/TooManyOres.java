@@ -47,8 +47,7 @@ public class TooManyOres {
   @Mod.EventHandler
   public void loadComplete(FMLLoadCompleteEvent e) {
 	  LOGGER.log(Level.INFO, "Starting Too Many Ores");
-	  try
-	  {
+	  try {
 		  LOGGER.log(Level.INFO, "Getting OreDict info");
 		  GetOres.get(writeSingleOres);
 	  }

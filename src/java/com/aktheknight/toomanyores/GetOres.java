@@ -26,13 +26,7 @@ public class GetOres {
 			if (Ore.substring(0, 3).equals("ore")) {
 				Ores = OreDictionary.getOres(Ore);
 				if (Ores.size() != 1 && Ores.size() != 0) {
-					OreFile.write(Ore);
-					for (ItemStack Items : Ores) {
-						String Item = Items.getUnlocalizedName();
-						OreFile.write("\t" + Item);
-						Item = Items.getDisplayName();
-						OreFile.write("\t\t" + Item);
-					}
+					write(Ore);
 				}
 			}
 		}
@@ -43,15 +37,19 @@ public class GetOres {
 		Ores = new ArrayList<ItemStack>();
 		for (String Ore : OreDict) {
 			if (Ore.substring(0, 3).equals("ore")) {
-				OreFile.write(Ore);
-				Ores = OreDictionary.getOres(Ore);
-				for (ItemStack Items : Ores) {
-					String Item = Items.getUnlocalizedName();
-					OreFile.write("\t" + Item);
-					Item = Items.getDisplayName();
-					OreFile.write("\t\t" + Item);
-				}
+				write(Ore);
 			}
+		}
+	}
+	
+	static void write(String Ore) throws IOException {
+		Ores = OreDictionary.getOres(Ore);
+		OreFile.write(Ore);
+		for (ItemStack Items : Ores) {
+			String Item = Items.getUnlocalizedName();
+			OreFile.write("\t" + Item);
+			Item = Items.getDisplayName();
+			OreFile.write("\t\t" + Item);
 		}
 	}
  }
