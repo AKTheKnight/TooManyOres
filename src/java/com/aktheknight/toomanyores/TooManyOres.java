@@ -33,7 +33,7 @@ public class TooManyOres {
   //Config options
   //Writing to file
   public static boolean writeSingleOres = true;
-  //Ore Gen
+  //Ore Gen. True if disabling
   public static boolean VanillaGen = false;
   public static boolean VanillaOres = false;
   public static boolean Dirt = false;
