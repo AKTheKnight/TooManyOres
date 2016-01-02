@@ -1,4 +1,4 @@
-package ores;
+package com.aktheknight.toomanyores.ores;
 
 import java.io.File;
 import java.io.FileWriter;

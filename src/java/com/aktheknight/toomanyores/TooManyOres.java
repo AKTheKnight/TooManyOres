@@ -1,13 +1,5 @@
 package com.aktheknight.toomanyores;
 
-import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.event.FMLLoadCompleteEvent;
-import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.common.MinecraftForge;
-import ores.GetOres;
-import ores.OreFile;
-import ores.OreGen;
-
 import java.io.File;
 import java.io.IOException;
 
@@ -15,7 +7,15 @@ import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import config.ConfigHandler;
+import com.aktheknight.toomanyores.config.ConfigHandler;
+import com.aktheknight.toomanyores.ores.GetOres;
+import com.aktheknight.toomanyores.ores.OreFile;
+import com.aktheknight.toomanyores.ores.OreGen;
+
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.event.FMLLoadCompleteEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.common.MinecraftForge;
 
 @Mod(modid="TooManyOres", name="Too Many Ores", version="1.7.10-1.0.3")
 

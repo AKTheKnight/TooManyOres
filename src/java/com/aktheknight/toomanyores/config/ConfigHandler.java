@@ -1,4 +1,4 @@
-package config;
+package com.aktheknight.toomanyores.config;
 
 import java.io.File;
 import java.util.ArrayList;
