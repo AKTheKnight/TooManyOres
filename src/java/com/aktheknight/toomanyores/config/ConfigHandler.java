@@ -3,11 +3,11 @@ package com.aktheknight.toomanyores.config;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Arrays;
 
 import com.aktheknight.toomanyores.TooManyOres;
 
 import net.minecraftforge.common.config.Configuration;
-import scala.actors.threadpool.Arrays;
 
 public class ConfigHandler {
 
